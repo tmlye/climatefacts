@@ -5,7 +5,7 @@ const facts = [
     "sourceText": "NASA/GISS"
   },
   {
-    "fact": "Arctic sea ice is now declining at a rate of 12.8 percent per decade",
+    "fact": "Arctic sea ice is now declining at a rate of 12.8 percent per decade.",
     "sourceUrl": "https://climate.nasa.gov/vital-signs/arctic-sea-ice/",
     "sourceText": "NSIDC/NASA"
   }

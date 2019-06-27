@@ -19,14 +19,14 @@
 <style>
 .container {
     max-width: 800px;
-    font-family: 'Open Sans', sans-serif;
     padding-right: 15px;
     padding-left: 15px;
-    margin-top: 20px;
+    margin-top: 30px;
     margin-right: auto;
     margin-left: auto;
 }
 .fact {
+    font-family: 'Merriweather', serif;
     font-size: 200%;
     margin: 40px 0 20px;
 }
