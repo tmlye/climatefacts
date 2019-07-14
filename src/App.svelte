@@ -1,18 +1,40 @@
 <script>
 	export let factsList
-    let index = Math.floor(Math.random() * factsList.length)
+    export let initialIndex
+    let index
+
+    if (isValidIndex(initialIndex)) {
+        setIndex(initialIndex)
+    } else {
+        setIndex(Math.floor(Math.random() * factsList.length))
+    }
+
+    function setIndex(newIndex) {
+        newIndex = mod(newIndex, factsList.length)
+        window.history.pushState('', 'Climate Fact ' + newIndex, '/' + newIndex)
+        index = newIndex
+    }
+
+    function isValidIndex(index) {
+        return isInteger(index) &&
+               index >= 0 &&
+               index < factsList.length
+    }
+
+    function isInteger(value) {
+        let x = parseFloat(value);
+        return !isNaN(value) && (x | 0) === x;
+    }
 
     function mod(n, m) {
         return ((n % m) + m) % m
     }
 
     function next() {
-        index += 1
-        index = mod(index, factsList.length)
+        setIndex(index + 1)
     }
     function previous() {
-        index -= 1
-        index = mod(index, factsList.length)
+        setIndex(index - 1)
     }
 </script>
 
